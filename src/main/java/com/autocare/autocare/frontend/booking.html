@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare - Book Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="dashboard">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="brand">
+            🚗 AutoCare
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+    <!-- Section Navigation -->
+    <div class="section-nav">
+
+        <button onclick="window.location.href='dashboard.html'">
+            🏠 Dashboard
+        </button>
+
+        <button onclick="window.location.href='vehicles.html'">
+            🚗 My Vehicles
+        </button>
+
+        <button onclick="window.location.href='services.html'">
+            🔧 Services
+        </button>
+
+        <button class="active" onclick="window.location.href='booking.html'">
+            📅 Book Service
+        </button>
+
+        <button onclick="window.location.href='bookings.html'">
+            📋 My Bookings
+        </button>
+
+    </div>
+
+    <!-- Welcome -->
+    <section class="welcome">
+
+        <h1>
+            Book a Service 📅
+        </h1>
+
+        <p>
+            Schedule a service for your vehicle.
+        </p>
+
+    </section>
+
+    <!-- Booking Form -->
+    <section class="booking-form">
+
+        <h2>
+            Service Booking
+        </h2>
+
+        <form id="bookingForm">
+
+            <!-- Vehicle -->
+            <div class="booking-group">
+
+                <label for="vehicleId">
+                    Select Vehicle
+                </label>
+
+                <select id="vehicleId" required>
+
+                    <option value="">
+                        Loading vehicles...
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Service -->
+            <div class="booking-group">
+
+                <label for="serviceId">
+                    Select Service
+                </label>
+
+                <select id="serviceId" required>
+
+                    <option value="">
+                        Loading services...
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Mechanic -->
+            <div class="booking-group">
+
+                <label for="mechanicId">
+                    Select Mechanic
+                </label>
+
+                <select id="mechanicId" required>
+
+                    <option value="">
+                        Loading mechanics...
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Date and Time -->
+            <div class="booking-row">
+
+                <div class="booking-group">
+
+                    <label for="bookingDate">
+                        Booking Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="bookingDate"
+                        required>
+
+                </div>
+
+                <div class="booking-group">
+
+                    <label for="bookingTime">
+                        Booking Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="bookingTime"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="booking-btn">
+
+                Confirm Booking
+
+            </button>
+
+        </form>
+
+        <p id="bookingMessage"></p>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

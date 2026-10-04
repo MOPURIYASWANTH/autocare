@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare - My Vehicles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="dashboard">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="brand">
+            🚗 AutoCare
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+    <!-- Section Navigation -->
+    <div class="section-nav">
+
+        <button onclick="window.location.href='dashboard.html'">
+            🏠 Dashboard
+        </button>
+
+        <button class="active" onclick="window.location.href='vehicles.html'">
+            🚗 My Vehicles
+        </button>
+
+        <button onclick="window.location.href='services.html'">
+            🔧 Services
+        </button>
+
+        <button onclick="window.location.href='booking.html'">
+            📅 Book Service
+        </button>
+
+        <button onclick="window.location.href='bookings.html'">
+            📋 My Bookings
+        </button>
+
+    </div>
+
+    <!-- Welcome -->
+    <section class="welcome">
+
+        <h1>My Vehicles 🚘</h1>
+
+        <p>
+            Manage your vehicles registered with AutoCare.
+        </p>
+
+    </section>
+
+    <!-- Add Vehicle -->
+    <section class="vehicle-form">
+
+        <h2>Add New Vehicle</h2>
+
+        <form id="vehicleForm">
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="vehicleNumber"
+                    placeholder="Vehicle Number"
+                    required>
+
+                <input
+                    type="text"
+                    id="brand"
+                    placeholder="Brand"
+                    required>
+
+            </div>
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="model"
+                    placeholder="Model"
+                    required>
+
+                <select id="vehicleType" required>
+
+                    <option value="">
+                        Select Vehicle Type
+                    </option>
+
+                    <option value="Car">
+                        Car
+                    </option>
+
+                    <option value="Bike">
+                        Bike
+                    </option>
+
+                    <option value="SUV">
+                        SUV
+                    </option>
+
+                </select>
+
+            </div>
+
+            <button type="submit">
+                Add Vehicle
+            </button>
+
+        </form>
+
+        <p id="vehicleMessage"></p>
+
+    </section>
+
+    <!-- Vehicle List -->
+    <section class="vehicle-section">
+
+        <h2>Your Vehicles</h2>
+
+        <div id="vehicleList">
+
+            <p>
+                Loading vehicles...
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+```
+
+</body>
+
+</html>

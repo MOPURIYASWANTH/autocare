@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="brand">
+            🚗 AutoCare
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+    <!-- Section Navigation -->
+    <div class="section-nav">
+
+        <button onclick="window.location.href='dashboard.html'">
+            🏠 Dashboard
+        </button>
+
+        <button onclick="window.location.href='vehicles.html'">
+            🚗 My Vehicles
+        </button>
+
+        <button class="active" onclick="window.location.href='services.html'">
+            🔧 Services
+        </button>
+
+        <button onclick="window.location.href='booking.html'">
+            📅 Book Service
+        </button>
+
+        <button onclick="window.location.href='bookings.html'">
+            📋 My Bookings
+        </button>
+
+    </div>
+
+    <!-- Welcome -->
+    <section class="welcome">
+
+        <h1>Available Services 🔧</h1>
+
+        <p>
+            Choose the right service for your vehicle.
+        </p>
+
+    </section>
+
+    <!-- Services -->
+    <section class="service-section">
+
+        <div id="serviceList">
+
+            <p>
+                Loading services...
+            </p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="app.js"></script>
+```
+
+</body>
+
+</html>

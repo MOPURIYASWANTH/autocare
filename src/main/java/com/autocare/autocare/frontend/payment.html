@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - AutoCare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+```
+<!-- Navbar -->
+<nav class="navbar">
+
+    <div class="brand">
+        🚗 AutoCare
+    </div>
+
+    <button
+        class="logout-btn"
+        onclick="logout()">
+
+        Logout
+
+    </button>
+
+</nav>
+
+<!-- Section Navigation -->
+<div class="section-nav">
+
+    <button onclick="window.location.href='dashboard.html'">
+        🏠 Dashboard
+    </button>
+
+    <button onclick="window.location.href='vehicles.html'">
+        🚗 My Vehicles
+    </button>
+
+    <button onclick="window.location.href='services.html'">
+        🔧 Services
+    </button>
+
+    <button onclick="window.location.href='booking.html'">
+        📅 Book Service
+    </button>
+
+    <button onclick="window.location.href='bookings.html'">
+        📋 My Bookings
+    </button>
+
+</div>
+
+<!-- Payment -->
+<div class="invoice-container">
+
+    <h1>
+        Make Payment
+    </h1>
+
+    <p class="page-subtitle">
+        Complete your vehicle service payment
+    </p>
+
+    <div class="invoice-card">
+
+        <div id="paymentInvoiceDetails">
+
+            <p class="loading-message">
+                Loading payment details...
+            </p>
+
+        </div>
+
+        <form id="paymentForm">
+
+            <div class="form-group">
+
+                <label for="paymentMethod">
+                    Payment Method
+                </label>
+
+                <select id="paymentMethod" required>
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option value="UPI">
+                        UPI
+                    </option>
+
+                    <option value="CARD">
+                        Card
+                    </option>
+
+                    <option value="CASH">
+                        Cash
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="paymentDate">
+                    Payment Date
+                </label>
+
+                <input
+                    type="date"
+                    id="paymentDate"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                Pay Now
+
+            </button>
+
+        </form>
+
+        <div id="paymentMessage"></div>
+
+    </div>
+
+    <!-- Back to Bookings -->
+    <div class="back-button-container">
+
+        <button
+            class="secondary-btn"
+            onclick="window.location.href='bookings.html'">
+
+            ← Back to Bookings
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+```
+
+</body>
+
+</html>

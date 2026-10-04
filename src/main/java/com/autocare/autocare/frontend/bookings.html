@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - AutoCare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+
+    <div class="brand">
+        🚗 AutoCare
+    </div>
+
+    <button
+        class="logout-btn"
+        onclick="logout()">
+        Logout
+    </button>
+
+</nav>
+
+<!-- Section Navigation -->
+<div class="section-nav">
+
+    <button onclick="window.location.href='dashboard.html'">
+        🏠 Dashboard
+    </button>
+
+    <button onclick="window.location.href='vehicles.html'">
+        🚗 My Vehicles
+    </button>
+
+    <button onclick="window.location.href='services.html'">
+        🔧 Services
+    </button>
+
+    <button onclick="window.location.href='booking.html'">
+        📅 Book Service
+    </button>
+
+    <button
+        class="active"
+        onclick="window.location.href='bookings.html'">
+        📋 My Bookings
+    </button>
+
+</div>
+
+<!-- Main -->
+<div class="booking-history-container">
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+                My Bookings
+            </h1>
+
+            <p class="page-subtitle">
+                Track your vehicle service
+            </p>
+
+        </div>
+
+        <button
+            class="login-btn"
+            onclick="openBooking()">
+
+            + Book Service
+
+        </button>
+
+    </div>
+
+    <!-- Status Filter -->
+    <div class="booking-filter">
+
+        <label for="statusFilter">
+            Filter by Status
+        </label>
+
+        <select
+            id="statusFilter"
+            onchange="filterBookings()">
+
+            <option value="ALL">
+                All Bookings
+            </option>
+
+            <option value="PENDING">
+                Pending
+            </option>
+
+            <option value="CONFIRMED">
+                Confirmed
+            </option>
+
+            <option value="IN_PROGRESS">
+                In Progress
+            </option>
+
+            <option value="COMPLETED">
+                Completed
+            </option>
+
+            <option value="CANCELLED">
+                Cancelled
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- Booking List -->
+    <div
+        id="bookingList"
+        class="booking-list">
+
+        <p class="loading-message">
+            Loading bookings...
+        </p>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

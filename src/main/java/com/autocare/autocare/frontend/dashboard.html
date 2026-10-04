@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - AutoCare</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="brand">
+            🚗 AutoCare
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+
+        <div class="welcome">
+
+            <h1>
+                Welcome,
+                <span id="customerName">Customer</span> 👋
+            </h1>
+
+            <p>
+                Manage your vehicles and service bookings
+            </p>
+
+        </div>
+
+
+       <!-- Statistics -->
+<div class="dashboard-stats">
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            🚗
+        </div>
+        <div>
+            <h3>Total Vehicles</h3>
+            <h2 id="totalVehicles">0</h2>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            📅
+        </div>
+        <div>
+            <h3>Total Bookings</h3>
+            <h2 id="totalBookings">0</h2>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            ⏳
+        </div>
+        <div>
+            <h3>Active Bookings</h3>
+            <h2 id="pendingBookings">0</h2>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">
+            ✅
+        </div>
+        <div>
+            <h3>Completed</h3>
+            <h2 id="completedBookings">0</h2>
+        </div>
+    </div>
+
+    <!-- Pending Payments -->
+    <div class="stat-card">
+        <div class="stat-icon">
+            💳
+        </div>
+        <div>
+            <h3>Pending Payments</h3>
+            <h2 id="pendingPayments">0</h2>
+        </div>
+    </div>
+
+</div>
+
+
+        <!-- Main Actions -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    🚗
+                </div>
+
+                <h2>My Vehicles</h2>
+
+                <p>
+                    Add and manage your vehicles.
+                </p>
+
+                <button
+                    class="login-btn"
+                    onclick="openVehicles()">
+
+                    Manage Vehicles
+
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    🔧
+                </div>
+
+                <h2>Services</h2>
+
+                <p>
+                    View available vehicle services.
+                </p>
+
+                <button
+                    class="login-btn"
+                    onclick="openServices()">
+
+                    View Services
+
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📅
+                </div>
+
+                <h2>Book Service</h2>
+
+                <p>
+                    Schedule a service for your vehicle.
+                </p>
+
+                <button
+                    class="login-btn"
+                    onclick="openBooking()">
+
+                    Book Now
+
+                </button>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    📋
+                </div>
+
+                <h2>My Bookings</h2>
+
+                <p>
+                    Track your service bookings.
+                </p>
+
+                <button
+                    class="login-btn"
+                    onclick="openBookings()">
+
+                    View Bookings
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
